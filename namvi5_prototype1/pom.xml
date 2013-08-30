@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>namvi5_prototype1</groupId>
+  <artifactId>namvi5_prototype1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>namvi5_prototype1</name>
+  
+  	<properties>
+		<java-version>1.6</java-version>
+		<org.springframework-version>3.1.0.RELEASE</org.springframework-version>
+		<org.aspectj-version>1.6.9</org.aspectj-version>
+		<org.slf4j-version>1.5.10</org.slf4j-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+  
+	<repositories>
+	<!-- OJDBC를 위해서 원격 저장소 셋팅 -->
+		<repository>
+	    	<id>mesir-repo</id>
+	    	<url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
+	 	</repository>
+	 	
+	 <repository>
+		   <id>EXTLIB</id>
+	   	<url>http://192.168.0.210:8080/nadlib/content/repositories/Extlib</url>
+	   	<releases><enabled>true</enabled></releases>
+	 	</repository>
+	</repositories>
+	
+	<dependencies>
+		<!-- Spring -->
+		<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${org.springframework-version}</version>
+		<exclusions>
+			<!-- Exclude Commons Logging in favor of SLF4j -->
+			<exclusion>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+			 </exclusion>
+		</exclusions>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${org.springframework-version}</version>
+	</dependency>
+	
+	    	<!--nad -->
+	<dependency>
+  		<groupId>com.netand</groupId>
+  		<artifactId>NADLIB</artifactId>
+  		<version>1.0.0</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.0</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.3</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

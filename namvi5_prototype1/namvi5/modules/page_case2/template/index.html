@@ -1,0 +1,16 @@
+<center>
+	<h1>
+		Hellow Namvi5 Prototype Page Case 2
+	</h1>
+	<ul>
+		<li><a href="?module=module_dynamic">dynamic</a></li>
+		<li><a href="?module=module_static">static</a></li>
+		<li><a href="../page/page_case1?module=module_static">page_change</a></li>
+	</ul>
+	<img src="../asset/page_case1/img/2.jpg" />	<!--  이 이미지의 경로도 문제다... 어떻게 바꿔야 하나... -->
+</center>
+<div ng-app="case1page" ng-controller="pageController">
+	<div>
+	<ng-include src="target" />
+	</div>
+</div>

@@ -1,20 +1,18 @@
-angular.module('case1page', ['ngGrid']);
+'use strict';
 
-var pageController = function( $scope ){
+requirejs([ '../lib/require.config.js'
+            ,"../page_case1/pageController"],
+   
+   function( namvi5, pageController ){
 
-	$scope.target_module = target_module;
-	
-	// 매뉴 선택자 만들기
-	$scope.menuClassSelector = function( module ){
-		if( module == $scope.target_module ) return "active";
-		return "";
-	};
-	
-	$scope.changeMainModule = function( module ){
-		// View 전환 하는 방법을 찾아 보자 ~!
-		$scope.target = "../module/" + module;
-		$scope.target_module = module;
-	};
-	
-	$scope.changeMainModule( target_module );
-};
+		namvi5.$("document").ready( function(){
+		var app = namvi5.angular.module('case1page', ['ngGrid']);
+
+		// 컨트롤러 등록 
+		pageController( app, namvi5 );
+		
+		namvi5.angular.bootstrap( document, ['case1page'] );
+	});
+
+});
+

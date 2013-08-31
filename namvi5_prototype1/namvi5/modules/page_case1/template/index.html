@@ -23,7 +23,8 @@
     }
   };					
 </style>
-<div ng-app="case1page" ng-controller="pageController">
+<div ng-controller="pageController" > 
+<!-- id="ng-app" ng-app="case1page" ng-controller="pageController" -->
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
 	  <div class="navbar-inner">
@@ -36,8 +37,7 @@
 	      <a class="brand" href="#"> Namvi5 Prototype Case 1</a>
 	      <div class="nav-collapse collapse">
 	        <ul class="nav">
-	          <li ng-class="menuClassSelector('module_dynamic')"><a href="#" ng-click="changeMainModule('module_dynamic')">dynamic</a></li>
-			  <li ng-class="menuClassSelector('module_static')"><a href="#"  ng-click="changeMainModule('module_static')">static</a></li>
+	          <li ng-repeat="item in module_list" ng-class="menuClassSelector(item.id)"><a href="" ng-click="changeMainModule(item.id)">{{item.id}}</a></li>
 			  <li ><a href="../page/page_case2?module=module_static">page_change</a></li>
 	        </ul>
 	        <form class="navbar-form pull-right">
@@ -60,3 +60,4 @@
 	  </footer>
 	</div> <!-- /container -->
 </div>
+<script data-main="../js/page_case1/index" src="../lib/requirejs/require.js"></script>

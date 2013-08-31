@@ -21,7 +21,7 @@ public class boot implements ServletContextListener {
      */
     public void contextInitialized(ServletContextEvent arg0) {
     	N5Modules modules = N5Modules.getInstance();
-    	modules.add("D:/ProjectSource/RNDTEST/trunc/trunk/source/webframework/namvi5_prototype1/namvi5/modules");
+    	modules.add("/Users/famersbs/git/namvi5/namvi5_prototype1/namvi5/modules/");
     	modules.load();
     }
 

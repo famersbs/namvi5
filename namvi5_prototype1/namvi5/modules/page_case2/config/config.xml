@@ -5,7 +5,6 @@
 	<default_set>index</default_set>
 	<sets>
 		<set id="index">	<!-- 하나의 모듈 셋에서 로딩 하는 순서임 !! -->
-			<element type="src">index</element>
 			<element type="template">index</element>
 		</set>
 	</sets>

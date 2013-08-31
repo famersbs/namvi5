@@ -42,4 +42,15 @@
     <servlet-name>module</servlet-name>
     <url-pattern>/module/*</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>js</display-name>
+    <servlet-name>js</servlet-name>
+    <servlet-class>com.netand.namvi5.js</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>js</servlet-name>
+    <url-pattern>/js/*</url-pattern>
+  </servlet-mapping>
 </web-app>

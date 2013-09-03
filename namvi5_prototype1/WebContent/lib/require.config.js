@@ -9,7 +9,8 @@ requirejs.config({
 		'angular' 			: '../lib/angular/angular.min',
 		'bootstrap' 		: '../lib/bootstrap/js/bootstrap.min',
 		'angular-strap' 	: '../lib/angular/angular-strap.min',
-		'nggrid'			: '../lib/nggrid/ng-grid.min'
+		'nggrid'			: '../lib/nggrid/ng-grid.min',
+		'flot'				: '../lib/flot/jquery.flot'
 	},
 	
 	shim:{
@@ -28,6 +29,9 @@ requirejs.config({
 		},
 		'nggrid':{
 			deps:['angular']
+		},
+		'flot':{
+			deps:['jquery']
 		}
 	}
 	
@@ -38,7 +42,8 @@ define([
            'angular',
            'angular-strap',
            'bootstrap',
-           'nggrid'
+           'nggrid',
+           'flot'
            ],
    function( $, angular ){
 		var module_list = [

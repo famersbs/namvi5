@@ -2,7 +2,6 @@ package com.netand.namvi5;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,7 +11,6 @@ import com.netand.namvi5.resp.httpResponUtil;
 /**
  * Servlet implementation class js
  */
-@WebServlet("/js")
 public class js extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
